@@ -14,6 +14,14 @@
 
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
 /* HEADER */
 
 header {
@@ -30,7 +38,6 @@ header {
     height: auto; 
 }
 
-.menu-icon img,
 .cart img {
     width: 33vw;
 }
@@ -73,4 +80,20 @@ a {
     justify-content: space-evenly;
     flex-direction: column;
 
+}
+
+/* MEDIA QUERIES (to make resposive from mobile to desktop) */
+
+@media screen and (min-width: 1024px){
+
+
+    label {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
 }
