@@ -163,7 +163,7 @@ h2::after {
   position: absolute;
   left: 200px;
   right: 200px;
-  height: 2px; /* Adjust thickness of underline as needed */
+  height: 2px;
   background-color: white; 
 }
 
@@ -264,7 +264,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px; /* Adjust margin as needed */
+  margin-top: 20px; 
 }
 
 .images img {
@@ -280,8 +280,8 @@ a {
 .box {
   flex: 1; /* Allow the boxes to grow and shrink as needed */
   background-color: transparent;
-  border: 2px solid white; /* White border */
-  padding: 20px; /* Adjust padding as needed */
+  border: 2px solid white; 
+  padding: 20px; 
   margin: 10px 10px; /* Adjust margin between boxes */
 }
 
@@ -355,7 +355,7 @@ a {
     }
 
     .location {
-      width: 50%; /* Adjust width as needed */
+      width: 50%; 
     }
   
     .box {
