@@ -19,28 +19,101 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: transparent;
 }
-
 
 /* HEADER */
 
 header {
-    background-color: #000000; 
-    text-align: center; 
-    padding: 0; 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.container-top {
+  display: flex;
+  align-items: row;
+}
+
+/* LOGO */
+
+.logo {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  top: 0;
+  order: 2;
 }
 
 .logo img {
-    max-width: 33%; 
-    height: auto; 
+  padding-bottom: 0%;
+  max-width: 15%; 
+  height: auto; 
+}
+
+.logobottom {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.logobottom img {
+  max-width: 15%;
+  height: auto;
+}
+/* NAV */
+
+.menu {
+  order: 1;
+  display: flex;
+}
+
+.hidden-checkbox {
+    display: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px;
+    background-color: #000000;
+    color: #fff;
+  }
+  
+  .nav-links {
+    display: none;
+  }
+  
+  .nav-links li {
+    list-style: none;
+    padding: 0 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+.cart {
+  order: 3;
 }
 
 .cart img {
-    width: 33vw;
+  padding-bottom: 10%;
+    width: 10vw;
 }
+ label {
+  padding-top: 30%;
+ }
+
+
 
 /* BODY */
 body {
@@ -60,40 +133,232 @@ body {
 
 /* HERO */
 
+h1 {
+  padding-top: 250%;
+  font-size: 70px;
+  text-align: left;
+  width: 100%;
+}
+
+.to {
+  display: inline-block; /* Ensure it's treated as a block element */
+}
+
+h1 img {
+  max-width: 150px; /* Adjust the maximum width of the image */
+}
+
+
+h2 {
+  padding-top: 15%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 35px;
+  text-decoration: underline;
+}
+
+h2::before,
+h2::after {
+  content: "";
+  position: absolute;
+  left: 200px;
+  right: 200px;
+  height: 2px; /* Adjust thickness of underline as needed */
+  background-color: white; 
+}
+
+p {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+
+.hero-box {
+  position: relative;
+}
+
+.glowing-circle {
+  position: absolute;
+  top: 70%;
+  left: 50;
+  width: 80%;
+  height: 20%;
+  border-radius: 50%;
+  border: 2px solid #B480FD; /* Purple glowing border */
+  box-shadow: 0 0 10px 10px #B480FD; /* Glowing effect */
+  z-index: -1; /* Ensure the circle is behind other content */
+  padding-top: 10%;
+}
+
+/* BUTTON */
+
+/* Style for the button */
+.glow-button {
+  background-color: #B480FD; /* Purple background */
+  color: #FFFFFF; /* White text */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Padding */
+  font-size: 20px; /* Font size */
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none; /* Remove outline on focus */
+  position: relative;
+}
+
+
+/* Glow effect on hover */
+.glow-button:hover {
+  animation: glow 1s infinite alternate; /* Apply glow animation */
+}
+
+/* Glow animation */
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px #B480FD, 0 0 20px #B480FD, 0 0 30px #B480FD; /* Start glow effect */
+    }
+    to {
+        box-shadow: 0 0 20px #B480FD, 0 0 30px #B480FD, 0 0 40px #B480FD; /* End glow effect */
+    }
+}
 
 /* DIV */
 
-div {
-    justify-content: center;
-    background-color: #000000;
-    padding: 2% 0;
-}
 
 /* A */
 
 a {
     color: #B480FD;
+    text-align: center;
+}
+
+.learn-more {
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between; /* Distribute items evenly along the main axis */
 }
 
 .column {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
+  flex: 1; /* Allow the columns to grow and shrink as needed */
+}
 
+.column:first-child {
+  text-align: left; /* Align content of the first column to the left */
+}
+
+.column:last-child {
+  text-align: right; /* Align content of the last column to the right */
+}
+
+/* CONTENT */
+
+.images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Adjust margin as needed */
+}
+
+.images img {
+  max-width: 30%;
+  height: auto;
+  margin-left: -20%; /* Adjust negative margin for overlapping effect */
+}
+
+.images img:not(:first-child) {
+  margin-left: -10%; /* Adjust negative margin for subsequent images */
+}
+
+.box {
+  flex: 1; /* Allow the boxes to grow and shrink as needed */
+  background-color: transparent;
+  border: 2px solid white; /* White border */
+  padding: 20px; /* Adjust padding as needed */
+  margin: 10px 10px; /* Adjust margin between boxes */
 }
 
 /* MEDIA QUERIES (to make resposive from mobile to desktop) */
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 768px) {
+  
+  .menu{
+    display: grid;
+    grid-template-rows: auto auto;
+  }
 
+  /* Move navigation under logo */
+  .container-top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar {
+    justify-content: flex-start;
+  }
+
+  .logo{
+    order: 1;
+  }
+    .nav-links {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+  
+    .hamburger {
+      display: none;
+    }
+
+    /* Keep cart on top right of the logo */
+    .cart {
+     order: -1;
+      margin-left: 500px;
+
+    }
 
     label {
         display: none;
     }
 
-    nav ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
+    h1 {
+      padding-top: 450%;
     }
-}
+
+
+    /* Keep glowing circle behind h1 */
+    .glowing-circle {
+      position: absolute;
+      top: 87%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 20%;
+    }
+      .tagline {
+        font-size: 1rem;
+      }
+    
+        /* Ensure location boxes become row next to each other */
+    .locations {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .location {
+      width: 50%; /* Adjust width as needed */
+    }
+  
+    .box {
+      margin: 10px; /* Adjust margin between boxes */
+    }
+  }
