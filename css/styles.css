@@ -36,8 +36,8 @@ header {
 }
 
 .container-top {
-  display: flex;
-  align-items: row;
+  flex-direction: row;
+  align-items: center; 
 }
 
 /* LOGO */
@@ -163,7 +163,7 @@ h2::after {
   position: absolute;
   left: 200px;
   right: 200px;
-  height: 2px;
+  height: 2px; /* Adjust thickness of underline as needed */
   background-color: white; 
 }
 
@@ -182,14 +182,15 @@ h3 {
 
 .glowing-circle {
   position: absolute;
-  top: 70%;
-  left: 50;
+  top: 50%;
+  left: 50%; /* Corrected */
+  transform: translate(-50%, -50%);
   width: 80%;
   height: 20%;
   border-radius: 50%;
-  border: 2px solid #B480FD; /* Purple glowing border */
-  box-shadow: 0 0 10px 10px #B480FD; /* Glowing effect */
-  z-index: -1; /* Ensure the circle is behind other content */
+  border: 2px solid #B480FD;
+  box-shadow: 0 0 10px 10px #B480FD;
+  z-index: -1;
   padding-top: 10%;
 }
 
@@ -264,7 +265,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px; 
+  margin-top: 20px; /* Adjust margin as needed */
 }
 
 .images img {
@@ -280,8 +281,8 @@ a {
 .box {
   flex: 1; /* Allow the boxes to grow and shrink as needed */
   background-color: transparent;
-  border: 2px solid white; 
-  padding: 20px; 
+  border: 2px solid white; /* White border */
+  padding: 20px; /* Adjust padding as needed */
   margin: 10px 10px; /* Adjust margin between boxes */
 }
 
@@ -289,6 +290,27 @@ a {
 
 @media screen and (min-width: 768px) {
   
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000; /* Ensure navigation bar appears on top */
+}
+
+/* Add padding to top of container to prevent overlap */
+.container {
+    padding-top: 60px; /* Adjust the value as needed */
+}
+
+/* Adjust position of hero section */
+.hero-box {
+    margin-top: 70px; /* Adjust the value to ensure proper spacing */
+}
   .menu{
     display: grid;
     grid-template-rows: auto auto;
@@ -355,7 +377,7 @@ a {
     }
 
     .location {
-      width: 50%; 
+      width: 50%; /* Adjust width as needed */
     }
   
     .box {
