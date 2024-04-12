@@ -242,21 +242,34 @@ a {
   justify-content: center;
 }
 
+/* FOOTER */
+
+
 .footer {
   display: flex;
-  justify-content: space-between; /* Distribute items evenly along the main axis */
+  justify-content: space-between;
+  border-top: 1px solid white;
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 20px;
 }
 
-.column {
-  flex: 1; /* Allow the columns to grow and shrink as needed */
+.left-column {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+
+
+}
+.right-column {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50%;
 }
 
-.column:first-child {
-  text-align: left; /* Align content of the first column to the left */
-}
-
-.column:last-child {
-  text-align: right; /* Align content of the last column to the right */
+.left-column a,
+.right-column a {
+  margin-bottom: 25%; /* Adjust the vertical space between each word */
 }
 
 /* CONTENT */
@@ -384,3 +397,5 @@ a {
       margin: 10px; /* Adjust margin between boxes */
     }
   }
+  
+
