@@ -11,27 +11,25 @@
 <body>
 <div class="container">
     <header>
-        <div class="container-top">
+        <label for="hamburger">&#9776;</label>
+        <div class="logo-nav">
             <div class="logo">
                 <img src="images/Logo.png" alt="Your Logo">
             </div>
-            <div class="menu">
-                <label for="hamburger">&#9776;</label>
-                <input type="checkbox" id="hamburger" name="hamburger" class="hidden-checkbox">
-                <nav class="navbar">
-                    <ul class="nav-links">
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="products.html">PRODUCTS</a></li>
-                        <li><a href="#">LOCATIONS</a></li>
-                        <li><a href="#">ABOUT</a></li>
-                        <li><a href="#">CONTACT</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="cart">
-                <i class="fa-solid fa-cart-shopping"></i>
-            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="products.html">PRODUCTS</a></li>
+                    <li><a href="#">LOCATIONS</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="contactpage.html">CONTACT</a></li>
+                </ul>
+            </nav>
         </div>
+        <div class="cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+        <input type="checkbox" id="hamburger" name="hamburger" class="hidden-checkbox">
     </header>
     <div class="hero-box">
         <div class="glowing-circle"></div>
@@ -83,18 +81,39 @@
             <a href="#">Contact</a>
             <a href="#">Q&A</a>
         </div>
+        <div class="social-icons">
+            <a href="#" class="social-icon"><img src="images/instaicon.png" alt="Instangram"></a>
+            <a href="#" class="social-icon"><img src="images/facebookicon.png" alt="Facebook"></a>
+            <a href="#" class="social-icon"><img src="images/twittericon.png" alt="Twitter"></a>
+        </div>  
         <div class="right-column">
             <a href="#">Products</a>
             <a href="#">About</a>
             <a href="#">Home</a>
-        </div>
-        <div class="social-icons">
-            <!-- Add social icons here if needed -->
         </div>
     </footer>
     <div class="logobottom">
         <img src="images/Logo.png" alt="Your Logo">
     </div>
 </div>
+<script>
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        var header = document.querySelector("header");
+        var navLinks = document.querySelector(".nav-links");
+        var cart = document.querySelector(".cart");
+
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            header.classList.add("scrolled");
+            navLinks.classList.add("scrolled");
+            cart.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+            navLinks.classList.remove("scrolled");
+            cart.classList.remove("scrolled");
+        }
+    }
+</script>
 </body>
 </html>
