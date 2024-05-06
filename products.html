@@ -4,39 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.typekit.net/ezt3lhk.css">
-    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="https://kit.fontawesome.com/bbc95e10ee.js" crossorigin="anonymous"></script>
     <title>Product Page</title>
 </head>
 <body>
     <div class="container">
         <header>
-            <div class="container-top">
+            <label for="hamburger">&#9776;</label>
+            <div class="logo-nav">
                 <div class="logo">
                     <img src="images/Logo.png" alt="Your Logo">
                 </div>
-                <div class="menu">
-                    <label for="hamburger">&#9776;</label>
-                    <input type="checkbox" id="hamburger" name="hamburger" class="hidden-checkbox">
-                    <nav class="navbar">
-                        <ul class="nav-links">
-                            <li><a href="index.html">HOME</a></li>
-                            <li><a href="products.html">PRODUCTS</a></li>
-                            <li><a href="#">LOCATIONS</a></li>
-                            <li><a href="#">ABOUT</a></li>
-                            <li><a href="#">CONTACT</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="cart">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
+                <nav class="navbar">
+                    <ul class="nav-links">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="products.html">PRODUCTS</a></li>
+                        <li><a href="#">LOCATIONS</a></li>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="contactpage.html">CONTACT</a></li>
+                    </ul>
+                </nav>
             </div>
+            <div class="cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <input type="checkbox" id="hamburger" name="hamburger" class="hidden-checkbox">
         </header>
         <div class="header-container">
-            <div class="arrow-container">
-                <a href="#" class="arrow">&larr;</a>
-            </div>
             <h1>Products</h1>
         </div>
         <main>
@@ -72,6 +67,11 @@
                 <a href="#">Contact</a>
                 <a href="#">Q&A</a>
             </div>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><img src="images/instaicon.png" alt="Instangram"></a>
+                <a href="#" class="social-icon"><img src="images/facebookicon.png" alt="Facebook"></a>
+                <a href="#" class="social-icon"><img src="images/twittericon.png" alt="Twitter"></a>
+            </div>  
             <div class="right-column">
                 <a href="#">Products</a>
                 <a href="#">About</a>
@@ -85,7 +85,28 @@
             <img src="images/Logo.png" alt="Your Logo">
         </div>
     </div>
-
+    <script>
+        window.onscroll = function() {scrollFunction()};
+    
+        function scrollFunction() {
+            var header = document.querySelector("header");
+            var logo = document.querySelector(".logo");
+            var menu = document.querySelector(".menu");
+            var cart = document.querySelector(".cart");
+    
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                header.style.display = "none";
+                logo.style.display = "none";
+                menu.style.display = "none";
+                cart.style.display = "none";
+            } else {
+                header.style.display = "flex";
+                logo.style.display = "block";
+                menu.style.display = "block";
+                cart.style.display = "flex";
+            }
+        }
+    </script>
 </body>
 </html>
 
