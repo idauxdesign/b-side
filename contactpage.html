@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&display=swap">
+    <script src="https://kit.fontawesome.com/bbc95e10ee.js" crossorigin="anonymous"></script>
+    <title>Contact Page</title>
+    <style>
+        body {
+          font-family: 'Anton', sans-serif;
+          /* Add other styles as needed */
+        }
+      </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <label for="hamburger">&#9776;</label>
+            <div class="logo-nav">
+                <div class="logo">
+                    <img src="images/Logo.png" alt="Your Logo">
+                </div>
+                <nav class="navbar">
+                    <ul class="nav-links">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="products.html">PRODUCTS</a></li>
+                        <li><a href="#">LOCATIONS</a></li>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="contactpage.html">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <input type="checkbox" id="hamburger" name="hamburger" class="hidden-checkbox">
+        </header>
+        <div class="form">
+            <h2>CONTACT</h2>
+            <div class="square-function">
+                <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="tel" name="phone" placeholder="Phone">
+                    <textarea name="goals" placeholder="Goals"></textarea>
+                    <button type="submit">SEND MESSAGE</button>
+                </form>
+            </div>
+        </div>
+        <div class="social-icons">
+            <a href="#" class="social-icon"><img src="images/instaicon.png" alt="Instangram"></a>
+            <a href="#" class="social-icon"><img src="images/facebookicon.png" alt="Facebook"></a>
+            <a href="#" class="social-icon"><img src="images/twittericon.png" alt="Twitter"></a>
+        </div>  
+        <div class=qa>
+            <h2>Q&A</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec feugiat lectus. Aliquam pretium felis ac est cursus, nec varius sapien commodo.</p>
+        </div>
+        <div class="revews">
+            <h2>REVIEWS</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec feugiat lectus. Aliquam pretium felis ac est cursus, nec varius sapien commodo.</p> 
+                <p>Sed quis eros nec lectus dictum vehicula. In hac habitasse platea dictumst. Proin ut turpis auctor, fermentum dui vel, placerat metus.</p>
+                <p>Proin et tempus lectus, at fermentum urna. Curabitur varius tellus a leo laoreet, eget rhoncus leo lacinia.</p>
+                <div class="glowing-bottom">
+                <a class="leave" href="#">Leave a Review</a>
+         </div>
+        </div>
+        <footer class="footer">
+            <div class="left-column">
+                <a href="#">Locations</a>
+                <a href="#">Contact</a>
+                <a href="#">Q&A</a>
+            </div>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><img src="images/instaicon.png" alt="Instangram"></a>
+                <a href="#" class="social-icon"><img src="images/facebookicon.png" alt="Facebook"></a>
+                <a href="#" class="social-icon"><img src="images/twittericon.png" alt="Twitter"></a>
+            </div>  
+            <div class="right-column">
+                <a href="#">Products</a>
+                <a href="#">About</a>
+                <a href="#">Home</a>
+            </div>
+        </footer>
+        <div class="logobottom">
+            <img src="images/Logo.png" alt="Your Logo">
+        </div>
+    </div>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+    
+        function scrollFunction() {
+            var header = document.querySelector("header");
+            var navLinks = document.querySelector(".nav-links");
+            var cart = document.querySelector(".cart");
+    
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                header.classList.add("scrolled");
+                navLinks.classList.add("scrolled");
+                cart.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+                navLinks.classList.remove("scrolled");
+                cart.classList.remove("scrolled");
+            }
+        }
+    </script>
+</body>
+</html>
+    
+
